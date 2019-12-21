@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/background_material_light</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+    </style>
+
+    <style name="NoHeaderLight" parent="MaterialNavigationDrawerTheme.Light.DarkActionBar">
+        <item name="colorPrimary">#8bc34a</item>
+        <item name="colorPrimaryDark">#558b2f</item>
+        <item name="colorAccent">@color/accent_material_light</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+        <item name="drawerType">@integer/DRAWERTYPE_IMAGE</item>
+    </style>
+
+    <style name="Calender" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/background_material_light</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>

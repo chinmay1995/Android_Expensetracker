@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:popupBackground="@color/background_material_light"
+            android:spinnerMode="dropdown"
+            android:background="@color/accent_material_dark"
+            android:prompt="@string/app_name"
+            android:textAlignment="center"
+            android:layout_gravity="center">
+
+        </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. "
+                    android:textColor="@color/primary_text_default_material_light" />
+
+                <EditText
+                    android:id="@+id/expense_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Amount"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/primary_text_default_material_light"
+                    android:textColorHint="@color/hint_foreground_material_light" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:checkedButton="@+id/pay_now_button"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/pay_now_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Pay Now"
+                android:textColor="@color/primary_text_default_material_light" />
+
+            <RadioButton
+                android:id="@+id/pay_later_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Pay Later"
+                android:textColor="@color/primary_text_default_material_light" />
+        </RadioGroup>
+
+        <ScrollView
+            android:id="@+id/datetime_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-40dp"
+                    app:mcv_headerTextAppearance="@style/AppTheme"
+                    app:mcv_weekDayTextAppearance="@style/AppTheme" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Cancel"
+                android:textColor="@color/primary_text_default_material_light" />
+
+            <Button
+                android:id="@+id/button_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/accent_material_light"
+                android:text="Done"
+                android:textColor="@color/primary_text_default_material_dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
